@@ -179,7 +179,6 @@ textarea {
 .price-card,
 .benefit-card,
 .testimonial-card,
-.gallery-card,
 .form-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -200,7 +199,6 @@ textarea {
 .price-card,
 .benefit-card,
 .testimonial-card,
-.gallery-card,
 .form-card {
   padding: 1.35rem;
 }
@@ -394,25 +392,16 @@ h3 {
   font-weight: 700;
 }
 
-.gallery-card {
-  gap: 0.9rem;
+.proof-grid {
+  grid-template-columns: 1fr;
 }
 
-.gallery-frame {
-  display: grid;
-  place-items: center;
-  min-height: 10rem;
-  border: 1px dashed #b9cecc;
-  border-radius: 1.2rem;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(235, 245, 251, 0.88));
-  color: var(--muted);
-  font-weight: 700;
-}
-
-.gallery-frame-after {
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(228, 245, 241, 0.92));
+.proof-stat {
+  margin-bottom: 0.8rem;
+  color: var(--accent-deep);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
 }
 
 .cta-band {
@@ -543,13 +532,8 @@ h3 {
   }
 
   .proof-grid {
-    grid-template-columns: 0.9fr 1.1fr;
-    align-items: stretch;
-  }
-
-  .gallery-card {
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
   }
 }
 

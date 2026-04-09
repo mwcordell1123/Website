@@ -52,11 +52,20 @@ if (quoteForm && feedback) {
 
     const formData = new FormData(quoteForm);
     const name = (formData.get("name") || "").toString().trim();
+    const number = (formData.get("number") || "").toString().trim();
+    const description = (formData.get("description") || "").toString().trim();
+
+    const message = encodeURIComponent(
+      "New quote request for SF Move-Out Clean + Haul\n\n" +
+      `Name: ${name}\n` +
+      `Phone: ${number}\n` +
+      `Details: ${description}`
+    );
 
     feedback.textContent = name
-      ? `Thanks, ${name}. Your request is ready to connect to your preferred inbox or form service.`
-      : "Thanks. Your request is ready to connect to your preferred inbox or form service.";
+      ? `Opening your text message for ${name}'s request.`
+      : "Opening your text message request.";
 
-    quoteForm.reset();
+    window.location.href = `sms:+17047133535?body=${message}`;
   });
 }
