@@ -52,12 +52,14 @@ if (quoteForm && feedback) {
 
     const formData = new FormData(quoteForm);
     const name = (formData.get("name") || "").toString().trim();
+    const neighborhood = (formData.get("neighborhood") || "").toString().trim();
     const number = (formData.get("number") || "").toString().trim();
     const description = (formData.get("description") || "").toString().trim();
 
     const message = encodeURIComponent(
       "New quote request for SF Move-Out Clean + Haul\n\n" +
       `Name: ${name}\n` +
+      `Neighborhood: ${neighborhood}\n` +
       `Phone: ${number}\n` +
       `Details: ${description}`
     );
