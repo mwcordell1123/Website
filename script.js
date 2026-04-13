@@ -66,6 +66,6 @@ if (quoteForm && feedback) {
       ? `Opening your text message for ${name}'s request.`
       : "Opening your text message request.";
 
-    window.location.href = `sms:+17047133535?body=${message}`;
+    window.location.href = `sms:+14154965979?body=${message}`;
   });
 }
