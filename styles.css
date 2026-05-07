@@ -443,18 +443,31 @@ h3 {
 
 .owner-photo {
   width: 100%;
-  max-width: 220px;
-  border-radius: 50%;
-  box-shadow: var(--shadow);
+  max-width: 240px;
+  aspect-ratio: 1;
   object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  margin-bottom: 1.5rem;
 }
 
 .hero-photo {
   display: block;
   width: 100%;
   max-width: 480px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
   border-radius: 16px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+}
+
+.footer-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  vertical-align: middle;
 }
 
 .testimonial-stack {
@@ -551,14 +564,13 @@ h3 {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 500ms ease, transform 500ms ease;
+  opacity: 1;
+  transform: none;
 }
 
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -682,6 +694,10 @@ h3 {
     padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
   }
 
+  .hero-photo {
+    max-height: 320px;
+  }
+
   .mobile-phone-bar {
     position: fixed;
     left: 0;
@@ -701,6 +717,13 @@ h3 {
     min-height: 3.15rem;
     padding-inline: 0.75rem;
     font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .owner-card {
+    justify-items: center;
+    text-align: center;
   }
 }
 
