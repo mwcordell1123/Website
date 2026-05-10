@@ -440,35 +440,52 @@ h3 {
 .pricing-addon-row {
   display: flex;
   justify-content: center;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
+  width: 100%;
 }
 
 .price-addon-card {
-  width: 100%;
-  max-width: 320px;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: 360px !important;
+  min-width: 280px;
+  text-align: center;
   background: #fafefd;
   border: 1px dashed rgba(42, 157, 143, 0.35);
+  padding: 1.5rem 2rem;
   position: relative;
+}
+
+.price-addon-card .price {
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
+}
+
+.price-addon-card h3 {
+  margin: 0 0 0.25rem 0;
 }
 
 .addon-tag {
   display: inline-block;
   background: rgba(42, 157, 143, 0.12);
   color: #2a9d8f;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .addon-note {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.85rem;
+  color: #666;
   margin-top: 0.5rem;
   line-height: 1.4;
+  max-width: 28ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pricing-subnote {
