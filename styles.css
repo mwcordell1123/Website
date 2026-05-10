@@ -437,6 +437,40 @@ h3 {
   line-height: 1.7;
 }
 
+.pricing-addon-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.price-addon-card {
+  width: 100%;
+  max-width: 320px;
+  background: #fafefd;
+  border: 1px dashed rgba(42, 157, 143, 0.35);
+  position: relative;
+}
+
+.addon-tag {
+  display: inline-block;
+  background: rgba(42, 157, 143, 0.12);
+  color: #2a9d8f;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.addon-note {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
 .pricing-subnote {
   margin: 0.65rem 0 0;
   color: var(--muted);
